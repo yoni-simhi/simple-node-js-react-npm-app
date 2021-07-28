@@ -1,12 +1,15 @@
 pipeline {
-    agent {
-        docker {
-            alwaysPull true
+    
+    agent {label "master"}
+    
+    //agent {
+      //  docker {
+        //    alwaysPull true
             //image 'node:lts-buster-slim'
-            image  'maven:3.6.3-jdk-1'
-            args '-p 3000:3000'
-        }
-    }
+          //  image  'maven:3.6.3-jdk-1'
+            //args '-p 3000:3000'
+        //}
+    //}
     environment {
         CI = 'true' 
     }
